@@ -1,0 +1,10 @@
+{%% extends "base.html" %}
+
+{% block content %}
+<h1>{{ profile.name }}</h1>
+<p>{{ profile.about }}</p>
+
+{% if profile.image %}
+<img src="{{ url_for('static', filename=profile.image) }}" width="200">
+{% endif %}
+{% endblock %}
